@@ -25,12 +25,13 @@ export default async function AdminUpitiPage() {
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card shadow-sm">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="flex items-center justify-between py-4">
-            <div className="flex items-center gap-3">
+          <div className="flex items-center justify-between py-4 gap-3">
+            {/* Logo */}
+            <div className="flex items-center gap-3 shrink-0">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                 <Plane className="h-5 w-5 text-primary" />
               </div>
-              <div>
+              <div className="hidden sm:block">
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">
                   Admin panel
                 </p>
@@ -39,13 +40,15 @@ export default async function AdminUpitiPage() {
                 </h1>
               </div>
             </div>
-            <div className="flex items-center gap-3">
+
+            {/* Akcije */}
+            <div className="flex items-center gap-2">
               <Link
                 href="/admin"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-all hover:border-primary hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold text-foreground transition-all hover:border-primary hover:text-primary"
               >
                 <ArrowLeft className="h-4 w-4" />
-                Nazad
+                <span className="hidden sm:inline">Nazad</span>
               </Link>
               <LogoutButton />
             </div>

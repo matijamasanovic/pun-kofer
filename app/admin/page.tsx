@@ -29,12 +29,13 @@ export default async function AdminPage() {
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card shadow-sm">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="flex items-center justify-between py-4">
-            <div className="flex items-center gap-3">
+          <div className="flex items-center justify-between py-4 gap-3">
+            {/* Logo */}
+            <div className="flex items-center gap-3 shrink-0">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                 <Plane className="h-5 w-5 text-primary" />
               </div>
-              <div>
+              <div className="hidden sm:block">
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">
                   Admin panel
                 </p>
@@ -43,33 +44,38 @@ export default async function AdminPage() {
                 </h1>
               </div>
             </div>
-            <div className="flex items-center gap-3">
+
+            {/* Akcije */}
+            <div className="flex items-center gap-2 flex-wrap justify-end">
               <Link
                 href="/admin/upiti"
-                className="relative inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-all hover:border-primary hover:text-primary"
+                className="relative inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold text-foreground transition-all hover:border-primary hover:text-primary"
               >
                 <MessageSquare className="h-4 w-4" />
-                Upiti
+                <span className="hidden sm:inline">Upiti</span>
                 {neprocitani > 0 && (
                   <span className="absolute -top-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
                     {neprocitani}
                   </span>
                 )}
               </Link>
+
               <Link
                 href="/admin/blog"
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-all hover:border-primary hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold text-foreground transition-all hover:border-primary hover:text-primary"
               >
                 <BookOpen className="h-4 w-4" />
-                Blog
+                <span className="hidden sm:inline">Blog</span>
               </Link>
+
               <Link
                 href="/admin/novi"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg"
               >
                 <Plus className="h-4 w-4" />
-                Novi aranžman
+                <span className="hidden sm:inline">Novi aranžman</span>
               </Link>
+
               <LogoutButton />
             </div>
           </div>
