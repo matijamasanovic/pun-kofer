@@ -103,11 +103,14 @@ export default function LoginPage() {
       </div>
 
       {/* Desna strana - slika */}
-      <div className="relative hidden lg:block overflow-hidden">
+      <div
+        className="hidden lg:block relative overflow-hidden"
+        style={{ minHeight: "100vh" }}
+      >
         <img
           src="/images/dest-sveti-stefan.jpg"
           alt="Pun Kofer Putovanja"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#0f172a]/50" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-12 text-center">
